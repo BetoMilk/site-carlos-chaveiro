@@ -1,0 +1,56 @@
+/* RESET E ESTILOS BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #808080; min-height: 100vh; overflow-x: hidden; font-family: 'Segoe UI', sans-serif; }
+header { width: 100%; }
+.img-topo { width: 100%; height: auto; display: block; }
+
+/* MENU */
+.menu-preto { width: 100%; height: 50px; background-color: #000; display: flex; justify-content: center; align-items: center; }
+.menu-preto ul { list-style: none; display: flex; gap: 40px; }
+.menu-preto ul li a { color: #fff; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; }
+
+/* CONTEÚDO */
+.conteudo-principal { padding: 30px 15px; display: flex; justify-content: center; }
+.quadro-branco { background-color: #fff; width: 100%; max-width: 950px; padding: 35px; border-radius: 4px; box-shadow: 0px 5px 15px rgba(0,0,0,0.3); }
+.quadro-branco h1 { text-align: center; text-transform: uppercase; border-bottom: 2px solid #000; padding-bottom: 8px; margin-bottom: 30px; }
+.quadro-branco p { font-size: 17px; line-height: 1.6; margin-bottom: 15px; color: #333; }
+.lista-marcacao { list-style-type: disc; margin-left: 25px; }
+.lista-marcacao li { font-size: 17px; margin-bottom: 8px; color: #333; }
+
+/* GRID SERVIÇOS */
+.grid-servicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.item-servico { padding: 15px; border: 1px solid #eee; border-radius: 6px; background-color: #fafafa; transition: 0.3s; }
+.item-servico:hover { transform: scale(1.02); border-color: #000; background-color: #fff; }
+.item-servico i { font-size: 28px; margin-bottom: 10px; color: #000; }
+.item-servico h3 { font-size: 16px; margin-bottom: 8px; }
+.item-servico p { font-size: 14px; color: #555; line-height: 1.4; }
+
+/* LOCALIZAÇÃO */
+.grid-localizacao { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 20px; }
+.info-contato h3 { border-left: 4px solid #000; padding-left: 10px; font-size: 18px; margin-bottom: 10px; }
+.mapa-box { border: 1px solid #ddd; border-radius: 4px; overflow: hidden; }
+
+/* WHATSAPP */
+.whatsapp-container { position: fixed; bottom: 30px; right: 30px; z-index: 1000; display: flex; flex-direction: column; align-items: flex-end; }
+.btn-wpp-principal { background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; border: none; font-size: 35px; cursor: pointer; box-shadow: 0px 4px 10px rgba(0,0,0,0.3); animation: tremor 4s infinite; }
+.opcoes-whatsapp { display: none; flex-direction: column; gap: 12px; margin-bottom: 15px; }
+.opcoes-whatsapp.active { display: flex; animation: fadeIn 0.3s ease; }
+.btn-avatar { background-color: #fff; padding: 8px 15px; border-radius: 50px; text-decoration: none; color: #333; font-weight: bold; display: flex; align-items: center; gap: 10px; box-shadow: 0px 4px 12px rgba(0,0,0,0.2); border: 1px solid #eee; }
+.btn-avatar img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+
+@keyframes tremor { 0%, 90% { transform: rotate(0); } 92% { transform: rotate(10deg); } 94% { transform: rotate(-10deg); } 96% { transform: rotate(10deg); } 98% { transform: rotate(-10deg); } 100% { transform: rotate(0); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ===========================================
+   ADICIONANDO RESPONSIVIDADE FINA AQUI
+   =========================================== */
+@media (max-width: 768px) {
+    .menu-preto ul { gap: 20px; }
+    .menu-preto ul li a { font-size: 12px; }
+    .quadro-branco { padding: 20px; max-width: 95%; }
+    .quadro-branco h1 { font-size: 22px; }
+    .grid-servicos { grid-template-columns: 1fr; }
+    .grid-localizacao { grid-template-columns: 1fr; }
+    .whatsapp-container { bottom: 20px; right: 20px; }
+    .btn-wpp-principal { width: 50px; height: 50px; font-size: 30px; }
+}

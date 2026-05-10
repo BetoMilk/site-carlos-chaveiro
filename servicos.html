@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Serviços de Chaveiro e Carimbos | Carlos Chaveiro Fortaleza</title>
+    <meta name="description" content="Conheça nossos serviços: Chaveiro residencial, automotivo, cópias de chaves e confecção rápida de carimbos no Meireles.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <img src="header-bg.png" alt="Cabeçalho Carlos Chaveiro" class="img-topo">
+    </header>
+
+    <nav class="menu-preto">
+        <ul>
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="servicos.html">SERVIÇOS</a></li>
+            <li><a href="localizacao.html">LOCALIZAÇÃO</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo-principal">
+        <section class="quadro-branco">
+            <h1>Nossos Serviços</h1>
+            
+            <div class="grid-servicos">
+                <div class="item-servico">
+                    <i class="fas fa-key"></i>
+                    <h3>Chaveiro Residencial</h3>
+                    <p>Abertura de portas, troca de segredos e instalação de fechaduras.</p>
+                </div>
+
+                <div class="item-servico">
+                    <i class="fas fa-car"></i>
+                    <h3>Chaveiro Automotivo</h3>
+                    <p>Cópias de chaves codificadas e reparos em telecomandos.</p>
+                </div>
+
+                <div class="item-servico">
+                    <i class="fas fa-stamp"></i>
+                    <h3>Carimbos</h3>
+                    <p>Confecção rápida de carimbos automáticos e datadores.</p>
+                </div>
+
+                <div class="item-servico">
+                    <i class="fas fa-copy"></i>
+                    <h3>Cópias de Chaves</h3>
+                    <p>Duplicação precisa de chaves simples, tetra e multiponto.</p>
+                </div>
+
+                <div class="item-servico">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cofres e Cadeados</h3>
+                    <p>Manutenção, aberturas de cofres e venda de cadeados.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="whatsapp-container">
+        <div class="opcoes-whatsapp" id="opcoesWpp">
+            <a href="https://wa.me/5585997492590" target="_blank" class="btn-avatar">
+                <img src="foto-beto.jpg" alt="Beto" onerror="this.src='https://via.placeholder.com/40'">
+                <span>Falar com Beto</span>
+            </a>
+            <a href="https://wa.me/5585991199562" target="_blank" class="btn-avatar">
+                <img src="foto-carlos.jpg" alt="Carlos" onerror="this.src='https://via.placeholder.com/40'">
+                <span>Falar com Carlos</span>
+            </a>
+        </div>
+        <button class="btn-wpp-principal" onclick="toggleWpp()">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <script>
+        function toggleWpp() {
+            const opcoes = document.getElementById('opcoesWpp');
+            opcoes.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
